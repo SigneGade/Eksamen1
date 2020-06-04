@@ -1,0 +1,1082 @@
+/*GENERELLE REGLER*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+
+/*GENEREL STYLING START */
+h1 {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+p {
+    text-decoration: none;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*GENEREL STYLING SLUT*/
+
+
+/*NAVIGATIONSBAR START med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+header {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    z-index: 2;
+}
+
+
+header img {
+    padding-top: 10px;
+}
+
+
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin: 0 .5em;
+}
+
+#logo-burger a {
+    margin-right: auto;
+    width: 100px;
+
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+
+}
+
+#main-nav a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#main-nav a:hover {
+    color: black;
+}
+
+
+/*Denne skjuler burgermenuens checkbox som aktiverer toggle funktionen*/
+.hidden {
+    display: none;
+}
+
+/*NAVIGATIONSBAR SLUT med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+
+
+/* START FORSIDE MOBIL */
+.baggrund {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.baggrund-desktop {
+    display: none;
+}
+
+.katjes-3d {
+    z-index: 1;
+    grid-area: 2/1/4/5;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.baggrund-mobil {
+    grid-area: 1/1/5/5;
+    z-index: -1;
+    padding-bottom: 30px;
+}
+
+.lasher {
+    grid-area: 4/1/5/5;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Patrick Hand';
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* SLUT FORSIDE MOBIL */
+
+
+
+/* START VARIANTER*/
+
+#varianter {
+    padding: 20px;
+}
+
+#varianter h2 {
+    text-align: center;
+}
+
+.separator-varianter {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.separator-varianter > h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.separator-varianter > h2:before,
+.separator-varianter > h2:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 2px;
+    background: black;
+}
+
+.separator-varianter > h2:before {
+    right: 110%;
+}
+
+.separator-varianter > h2:after {
+    left: 110%;
+}
+
+#grid-container-varianter {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-template-rows: repeat(2, 3fr);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.abe-hoveder {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 10px;
+}
+
+.lykke-mix {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 10px;
+}
+
+.salte-fisk {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 10px;
+}
+
+.eventyrland {
+    grid-area: 2 / 2 / 3 / 3;
+    margin: 10px;
+}
+
+/* SLUT VARIANTER*/
+
+
+
+/* START KONKURRENCE*/
+.separator-konkurrence {
+    display: block;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+.separator-konkurrence > h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.separator-konkurrence > h2:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 2px;
+    background: black;
+}
+
+.separator-konkurrence > h2:before {
+    right: 110%;
+}
+
+#konkurrence {
+    background-color: #C1D7B6;
+    padding: 20px;
+}
+
+#konkurrence h2 {
+    text-align: right;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#konkurrence h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#konkurrence a {
+    color: black;
+    text-decoration: underline;
+}
+
+#konkurrence p {
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+
+#skriv {
+    margin-top: 20px;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type=submit] {
+    max-width: 200px;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+/* SLUT KONKURRENCE*/
+
+
+
+/*START VÆRDIER-SIDE*/
+.separator-vaerdier {
+    display: block;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.separator-vaerdier > h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.separator-vaerdier > h2:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 2px;
+    background: black;
+    left: 120%;
+}
+
+#vaerdier {
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 30px;
+    margin: 20px;
+}
+
+#vaerdier h2 {
+    text-align: left;
+}
+
+#vaerdier p {
+    margin: 10px;
+}
+
+#vaerdier h3 {
+    margin-top: 20px;
+}
+
+.natur img {
+    height: 150px;
+    width: auto;
+    padding-top: 30px;
+}
+
+.miljo img {
+    height: 150px;
+    width: auto;
+    padding-top: 30px;
+}
+
+.socialt-ansvar img {
+    height: 150px;
+    width: auto;
+    padding-top: 30px;
+}
+
+.kvalitet img {
+    height: 150px;
+    width: auto;
+    padding-top: 30px;
+}
+
+/*SLUT VÆRDIER*/
+
+
+
+/* START INSTAGRAM*/
+#instagram img {
+    padding-bottom: 20px;
+}
+
+#instagram {
+    text-align: center;
+    background-color: #FDC7C7;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#instagram p {
+    padding-bottom: 20px;
+}
+
+.foelg-instagram {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 20px;
+    color: #000;
+}
+
+.foelg-facebook {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 20px;
+    color: #000;
+}
+
+#instagram h2 {
+    padding-bottom: 20px;
+}
+
+.foelg-facebook a {
+    color: #000;
+}
+
+.foelg-instagram a {
+    color: #000;
+}
+
+.instagram-1 {
+    display: none;
+}
+
+.instagram-3 {
+    display: none;
+}
+
+.instagram-4 {
+    display: none;
+}
+
+/*SLUT INSTAGRAM*/
+
+
+/*FOOTER START*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer {
+    background-color: #fff;
+    line-height: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.ft-overskrift {
+    color: #000;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    /* same as flex-grow: 1; */
+}
+
+/*responsiv flex*/
+
+.ft-main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.ft-main-tekst {
+    padding: 15px;
+    min-width: 20px;
+    /*200px*/
+    ;
+}
+
+
+/* start kontaktformular */
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type=text],
+select {
+    padding: 10px;
+    margin-top: 5px;
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+input[type=submit] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+
+/* slut kontaktformular */
+
+
+/* start sociale medier ikoner*/
+.ft-social {
+    padding: 20px;
+}
+
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #fff solid;
+    padding-top: 20px;
+}
+
+.ft-social-list li {
+    margin: 10px;
+}
+
+/* slut sociale medier ikoner*/
+
+/*start copyright footer*/
+.ft-legal {
+    padding: 10px;
+    background-color: gainsboro;
+}
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-legal-list li {
+    margin: 5px;
+    white-space: nowrap;
+}
+
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;
+    /* same as flex-grow: 1; */
+}
+
+/*slut copyright footer*/
+
+/*FOOTER SLUT*/
+
+
+
+/*MEDIA QUERY MOBILE */
+@media all and (max-width: 599px) {
+
+    /*NAVIGATIONSBAR START med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+    header {
+        display: block;
+        position: fixed;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*label er selve burgerikonet*/
+    #logo-burger label {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    /*Den primære navigation skjules på den lille skærm*/
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav a {
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /*NAVIGATIONSBAR SLUT med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+
+}
+
+
+/*MEDIA QUERY TABLET AND ABOVE*/
+@media all and (min-width: 600px) {
+
+
+    /*NAVIGATIONSBAR START med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+    #main-nav {
+        justify-content: space-evenly;
+        min-width: 50%;
+        margin: 0;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+        font-size: 15px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /*Dette fjerner burgermenu ikonet*/
+    label {
+        display: none;
+    }
+
+    /*Dette skubber menuen ud til højre ved at bruge al margin til højre for logoet*/
+    #logo-burger {
+        margin-right: auto;
+    }
+
+    /*NAVIGATIONSBAR SLUT med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+
+
+    /*START FORSIDE */
+    .baggrund {
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 30px;
+    }
+
+    .baggrund-desktop {
+        display: block;
+        z-index: -1;
+        grid-area: 1/1/3/5;
+        padding: 0px;
+    }
+
+    .baggrund-mobil {
+        display: none;
+    }
+
+    .katjes-3d {
+        grid-area: 1/3/3/5;
+        padding-top: 50px;
+    }
+
+    .baggrund a {
+        grid-area: 2/1/3/3;
+        font-size: 22px;
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 30px;
+        font-family: 'Patrick Hand';
+    }
+
+    /*START FORSIDE */
+
+
+    /* START VARIANTER*/
+    .separator-varianter {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    #grid-container-varianter {
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .abe-hoveder {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .lykke-mix {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .salte-fisk {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .eventyrland {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+
+    /* SLUT VARIANTER*/
+
+
+    /*START KONKURRENCE*/
+
+    .separator-konkurrence {
+        display: block;
+        text-align: right;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+
+    .separator-konkurrence > h2:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 2px;
+        background: black;
+    }
+
+    .separator-konkurrence > h2:before {
+        right: 110%;
+    }
+
+    #konkurrence h2 {
+        margin: 20px;
+        text-align: right;
+    }
+
+    h4 {
+        margin: 10px;
+    }
+
+    #konkurrence p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #konkurrence a {
+        margin-bottom: 20px;
+        margin-left: 10px;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .kontaktudfyld {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #skriv {
+        max-width: 800px;
+        height: 100px;
+        padding: 14px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    #navn {
+        max-width: 444px;
+        padding: 14px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    #email {
+        max-width: 444px;
+        padding: 14px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    #telefon {
+        max-width: 444px;
+        padding: 14px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        max-width: 200px;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 5px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    /*SLUT KONKURRENCE*/
+
+
+    /*START VÆRDIER-SIDE*/
+    #vaerdier {
+        text-align: left;
+        padding-bottom: 30px;
+        margin: 20px;
+    }
+
+    .natur {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 20px;
+    }
+
+    .miljo {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 20px;
+    }
+
+    .socialt-ansvar {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 20px;
+    }
+
+    .kvalitet {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 20px;
+    }
+
+    #vaerdier h3 {
+        padding-left: 10px;
+    }
+
+    /*SLUT VÆRDIER*/
+
+
+    /* START INSTAGRAM*/
+    #instagram h2 {
+        margin-top: 20px;
+    }
+
+    .slideshow-container {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    slideshow-container img {
+        width: 25%;
+    }
+
+    .instagram-1 {
+        display: block;
+        margin: 10px;
+    }
+
+    .instagram-2 {
+        display: block;
+        margin: 10px;
+    }
+
+    .instagram-3 {
+        display: block;
+        margin: 10px;
+    }
+
+    .instagram-4 {
+        display: block;
+        margin: 10px;
+    }
+
+    /*SLUT INSTAGRAM*/
+
+
+
+    /*START FOOTER */
+    .ft-main {
+        justify-content: space-around;
+    }
+
+    /*SLUT FOOTER */
+}
+
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+@media all and (min-width: 1024px) {
+
+    /*NAVIGATIONSBAR START med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+
+    header {
+        position: fixed;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    /*Dette skubber menuen ud til højre ved at bruge al margin til højre for logoet*/
+    #logo-burger {
+        margin-right: auto;
+    }
+
+    #main-nav a {
+        font-size: 20px;
+    }
+
+    /*NAVIGATIONSBAR SLUT med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
+
+
+    /*START FORSIDE*/
+    .katjes-3d {
+        grid-area: 1/3/3/5;
+        padding-top: 70px;
+    }
+
+    .baggrund a {
+        grid-area: 2/1/3/3;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 65px;
+        padding-left: 30px;
+        font-family: 'Patrick Hand';
+    }
+
+    /*SLUT FORSIDE*/
+
+
+    /*START VARIANTER*/
+    .separator-varianter {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    /*SLUT VARIANTER*/
+
+
+    /*START KONKURRENCE */
+    .separator-konkurrence {
+        display: block;
+        text-align: right;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+
+    .separator-konkurrence > h2:before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        width: 9999px;
+        height: 2px;
+        background: black;
+    }
+
+    .separator-konkurrence > h2:before {
+        right: 110%;
+    }
+
+    #konkurrence h2 {
+        margin: 20px;
+        text-align: right;
+    }
+
+    #konkurrence p {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    #konkurrence h4 {
+        margin-left: 10px;
+    }
+
+    #konkurrence h2 {
+        margin: 20px;
+        padding-top: 20px;
+        text-align: right;
+    }
+
+    #konkurrence a {
+        margin: 10px;
+        margin-bottom: 20px;
+        color: black;
+        text-decoration: underline;
+    }
+
+    input[type=text],
+    select {
+        width: 100%;
+        padding: 14px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 5px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+    input[type=submit]:hover {
+        background-color: gray;
+    }
+
+    /*SLUT KONKURRENCE */
+
+
+    /*START VÆRDIER*/
+    #vaerdier {
+        text-align: left;
+        padding-bottom: 30px;
+        margin: 0xpx;
+    }
+
+    .natur {
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+
+    .miljo {
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+
+    .socialt-ansvar {
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+
+    .kvalitet {
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+
+    /*SLUT VÆRDIER*/
+
+
+    /*START FOOTER*/
+    .ft-main {
+        justify-content: space-evenly;
+    }
+
+    /*SLUT FOOTER*/
+}
