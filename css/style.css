@@ -1,5 +1,4 @@
 /*GENERELLE REGLER*/
-
 body {
     padding: 0;
     margin: 0;
@@ -49,7 +48,6 @@ header {
     z-index: 2;
 }
 
-
 header img {
     padding-top: 10px;
 }
@@ -64,13 +62,11 @@ header img {
 #logo-burger a {
     margin-right: auto;
     width: 100px;
-
 }
 
 #main-nav {
     display: flex;
     margin-right: .5em;
-
 }
 
 #main-nav a {
@@ -133,7 +129,6 @@ header img {
 
 
 /* START VARIANTER*/
-
 #varianter {
     padding: 20px;
 }
@@ -715,7 +710,6 @@ input[type=submit] {
 
 
     /*START KONKURRENCE*/
-
     .separator-konkurrence {
         display: block;
         text-align: right;
