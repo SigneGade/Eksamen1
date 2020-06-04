@@ -34,7 +34,6 @@ p {
 a {
     text-decoration: none;
 }
-
 /*GENEREL STYLING SLUT*/
 
 
@@ -86,7 +85,6 @@ header img {
 .hidden {
     display: none;
 }
-
 /*NAVIGATIONSBAR SLUT med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
 
 
@@ -905,7 +903,6 @@ input[type=submit] {
 @media all and (min-width: 1024px) {
 
     /*NAVIGATIONSBAR START med inspiration fra Michelle: https://github.com/itaddiction/flexnavdropdown*/
-
     header {
         position: fixed;
     }
